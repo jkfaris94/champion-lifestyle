@@ -1,0 +1,198 @@
+/*
+Theme Name: Champ basic
+Theme URI: http://champlife.fit
+Author: jkfaris94
+Author URI: https://github.com/jkfaris94
+Description: basic first edition theme to hold while site gets further updated
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: champ-life
+template: parent-theme-champlife
+*/
+
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Basic body styling */
+  body {
+    font-family: Arial, sans-serif;
+    color: #f0f0f0;
+    background-color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: #1a1a1a;
+    padding: 1em 0;
+    text-align: center;
+  }
+  
+  header h1 {
+    color: #f0f0f0;
+    margin-bottom: 0.5em;
+  }
+  
+  header .slogan {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 1em;
+    font-style: italic;
+  }
+  
+  header nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  header nav ul li a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  header nav ul li a:hover {
+    text-decoration: underline;
+  }
+  /* Basic link styling */
+a.bark-link {
+    font-size: 18px; /* Font size */
+    font-weight: bold;
+    color: rgb(10, 10, 68); /* Font color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Hover effect */
+a.bark-link:hover {
+    color: rgb(153, 8, 8); /* Color on hover */
+}
+
+/* Active/clicked effect */
+a.bark-link:active {
+    color: green; /* Color when clicked */
+}
+
+/* Visited link */
+a.bark-link:visited {
+    color: purple; /* Color after the link has been visited */
+}
+
+  /*company logo styling */
+
+  .logo {
+    width: 100%;
+    height: auto;
+    }
+  /* Section styling */
+  section {
+    padding: 2em 10%;
+    background-color: #444;
+    margin-bottom: 1em;
+  }
+  
+  section h2 {
+    border-bottom: 2px solid #1e90ff;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    color: #f0f0f0;
+  }
+  
+  section p {
+    color: #e0e0e0;
+    margin-bottom: 1em;
+  }
+  
+  section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  section ul li {
+    background: #555;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  /* Contact form styling */
+section#contact {
+    padding: 2em 10%;
+    background-color: #444;
+    margin-bottom: 1em;
+    color: #f0f0f0;
+  }
+  
+  section#contact h2 {
+    border-bottom: 2px solid #1e90ff;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+  }
+  
+  section#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  section#contact form label {
+    margin-bottom: 0.5em;
+  }
+  
+  section#contact form input,
+  section#contact form textarea {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  section#contact form button {
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+  }
+  
+  section#contact form button:hover {
+    background-color: #1a75d1;
+  }
+  
+  
+  /* Footer styling */
+  footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 1em 0;
+  }
+  
+  footer p {
+    color: #f0f0f0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    section {
+      padding: 2em 5%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header nav ul li {
+      display: block;
+      margin: 0.5em 0;
+    }
+  }

@@ -23,10 +23,10 @@
         </header>
         <body>
             <section>
-                <div class="container d-flex justify-content-center">
+                <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
                     <div class="col-md-6">
                         <h2 class="text-center my-4">Calorie Calculator</h2>
-                        
+            
                         <form id="calorieForm">
                             <div class="row">
                                 <div class="col-md-6 mb-3 d-flex flex-column align-items-center">
@@ -53,6 +53,26 @@
                                 </div>
                             </div>
             
+                            <div class="row">
+                                <div class="col-md-6 mb-3 d-flex flex-column align-items-center">
+                                    <label for="body-type" class="form-label">Body Type:</label>
+                                    <select id="body-type" class="form-select form-select-sm small-select" required>
+                                        <option value="ectomorph">Ectomorph</option>
+                                        <option value="endomorph">Endomorph</option>
+                                        <option value="mesomorph">Mesomorph</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3 d-flex flex-column align-items-center">
+                                    <label for="body-goal" class="form-label">Body Goal:</label>
+                                    <select id="body-goal" class="form-select form-select-sm small-select" required>
+                                        <option value="maintain">Maintain</option>
+                                        <option value="fat_loss">Fat Loss</option>
+                                        <option value="build_muscle">Build Muscle</option>
+                                        <option value="recomp">Lose Fat + Build Muscle</option>
+                                    </select>
+                                </div>
+                            </div>
+            
                             <div class="mb-3 d-flex flex-column align-items-center">
                                 <label for="activity" class="form-label me-2">Activity Level:</label>
                                 <select id="activity" class="form-select form-select-md medium-select" required>
@@ -61,6 +81,17 @@
                                     <option value="1.55">Moderately active (moderate exercise/sports 3-5 days a week)</option>
                                     <option value="1.725">Very active (hard exercise/sports 6-7 days a week)</option>
                                     <option value="1.9">Super active (very hard exercise & physical job)</option>
+                                </select>
+                            </div>
+            
+                            <div class="mb-3 d-flex flex-column align-items-center">
+                                <label for="goal" class="form-label me-2">Goal:</label>
+                                <select id="goal" class="form-select form-select-md medium-select" required>
+                                    <option value="maintain">Maintain</option>
+                                    <option value="fat_loss">Fat Loss</option>
+                                    <option value="build_muscle">Build Muscle</option>
+                                    <option value="recomp">Lose Fat + Build Muscle</option>
+                                    <option value="tbd">TBD</option>
                                 </select>
                             </div>
             

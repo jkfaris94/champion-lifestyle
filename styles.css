@@ -136,7 +136,7 @@ section#contact form button:hover {
 }
 
 .medium-select {
-  max-width: 250px; /* Adjust this as needed */
+  width: 100%; /* Adjust this as needed */
 }
 
 /* Footer styling */

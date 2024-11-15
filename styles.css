@@ -126,6 +126,19 @@ section#contact form button:hover {
   background-color: #1a75d1;
 }
 
+/* calorie form styling */
+.small-input {
+  max-width: 100px; /* Adjust this as needed */
+}
+
+.small-select {
+  max-width: 100px; /* Adjust this as needed */
+}
+
+.medium-select {
+  max-width: 250px; /* Adjust this as needed */
+}
+
 /* Footer styling */
 footer {
   background-color: #1a1a1a;

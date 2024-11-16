@@ -1,0 +1,7 @@
+function calculateCalories() {
+    
+}
+
+function calculateMacros() {
+
+}

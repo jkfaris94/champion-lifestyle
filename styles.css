@@ -14,7 +14,7 @@ body {
 
 /* Header styling */
 header {
-  background-color: #1a1a1a;
+  background-color: #000000;
   padding: 1em 0;
   text-align: center;
 }
@@ -127,7 +127,7 @@ section#contact form button:hover {
 }
 
 body {
-  background-color: #1a1a1a;
+  background-color: #000000;
 }
 
 /* calorie form styling */
@@ -145,7 +145,7 @@ body {
 
 /* Footer styling */
 footer {
-  background-color: #1a1a1a;
+  background-color: #000000;
   text-align: center;
   padding: 1em 0;
 }

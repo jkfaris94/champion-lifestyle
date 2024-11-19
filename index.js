@@ -28,3 +28,4 @@ function submitContactForm(event) {
     });
 }
  
+document.getElementById('contactForm').addEventListener('submit', submitContactForm);

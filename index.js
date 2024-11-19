@@ -1,4 +1,4 @@
-emailjs.init("chOrTsLOMQFnW_xza");
+emailjs.init("chOrTsLOMQFnW_xza", "https://api.emailjs.com");
 
 
 function submitContactForm(event) {

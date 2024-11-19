@@ -1,4 +1,8 @@
-emailjs.init("chOrTsLOMQFnW_xza", "https://api.emailjs.com");
+emailjs.init({
+  publicKey: 'chOrTsLOMQFnW_xza',
+  // Do not allow headless browsers
+  blockHeadless: true,
+});
 
 
 function submitContactForm(event) {

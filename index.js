@@ -1,32 +1,30 @@
-function submitContactForm() {
-    // Get form values
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+emailjs.init("service_t458qp2");
+
+
+function submitContactForm(event) {
+  event.preventDefault();
+
+  // Get form values
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
   
-    // Create an object to send as JSON
-    const formData = {
-      name: name,
-      email: email,
-      message: message
-    };
+  // Create an object to send as JSON
+  const templateParams = {
+    name: name,
+    email: email,
+    message: message
+  };
   
-    // Send data to the server
-    fetch('https://example.com/api/contact', { // Replace with your server endpoint
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-      // Display a success message
-      document.getElementById("responseMessage").innerText = "Thank you for your message!";
-    })
-    .catch(error => {
-      // Display an error message
-      document.getElementById("responseMessage").innerText = "An error occurred. Please try again.";
+  // use EmailJS to send the email
+  emailjs.send("service_id", "template_id" templateParams)
+    .then(function (response) {
+      console.log("SUCCESS!", response.status, response.text);
+      document.getElementById("formResponse").textContent = "Your message has been sent successfully!";
+      document.getElementById("contactForm").requestFullscreen();
+    }, function (error) {
+      console.error("FAILED...", error);
+      document.getElementById("formResponse").textContent = "Failed to send message, please try again.";
     });
-  }
-  
+}
+ 

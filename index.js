@@ -21,7 +21,7 @@ function submitContactForm(event) {
     .then(function (response) {
       console.log("SUCCESS!", response.status, response.text);
       document.getElementById("formResponse").textContent = "Your message has been sent successfully!";
-      document.getElementById("contactForm").requestFullscreen();
+      document.getElementById("contactForm").reset();
     }, function (error) {
       console.error("FAILED...", error);
       document.getElementById("formResponse").textContent = "Failed to send message, please try again.";

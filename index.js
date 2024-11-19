@@ -1,4 +1,4 @@
-emailjs.init("service_t458qp2");
+emailjs.init("chOrTsLOMQFnW_xza");
 
 
 function submitContactForm(event) {
@@ -17,7 +17,7 @@ function submitContactForm(event) {
   };
   
   // use EmailJS to send the email
-  emailjs.send("service_id", "template_id" templateParams)
+  emailjs.send("service_t458qp2", "template_hjmej7w", templateParams)
     .then(function (response) {
       console.log("SUCCESS!", response.status, response.text);
       document.getElementById("formResponse").textContent = "Your message has been sent successfully!";

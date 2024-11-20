@@ -19,7 +19,7 @@
                 </ul>
             </nav>
         </header>
-        <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="container d-flex justify-content-center" style="min-height: 100vh;">
                 <div class="col-md-6">
                     <section>
                     <h2 class="text-center my-4">Calorie Calculator</h2>
@@ -73,6 +73,23 @@
                                     <option value="moderate">Moderately Active</option>
                                     <option value="active">Very Active</option>
                                 </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="fitness-goal" class="form-label">Primary Body Goal:</label>
+                                <select id="fitness-goal" class="form-select" required>
+                                    <option value="">Select...</option>
+                                    <option value="active">Fat Loss</option>
+                                    <option value="sedentary">Weight Loss</option>
+                                    <option value="light">Maintaince</option>
+                                    <option value="moderate">Build Muscle</option>
+                                    <option value="active">Gain Weight</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="goal-weight" class="form-label">Goal Weight (lbs):</label>
+                                <input type="number" id="goal-weight" class="form-control" required>
                             </div>
                         </div>
 

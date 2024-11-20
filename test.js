@@ -7,7 +7,7 @@ function calculateCalories() {
     const sex = document.getElementById('sex').value; 
     const age = parseFloat(document.getElementById('age').value);
     const goalWeight = parseFloat(document.getElementById('goal-weight').value);
-    //const fitnessGoal = document.getElementById('fitness-goal').value;
+    const fitnessGoal = document.getElementById('fitness-goal').value;
 
     // Validate inputs
     if (isNaN(weight) || isNaN(feet) || isNaN(inches) || !sex || isNaN(age)) {
@@ -73,9 +73,12 @@ function calculateCalories() {
     const caloriesFromProtein = maintenanceCalories * selectedMacro.protein;
     const caloriesFromFats = maintenanceCalories * selectedMacro.fats;
 
-    const goalCarbs = goalCalories * selectedMacro.carbs;
-    const goalProtein = goalCalories * selectedMacro.protein;
-    const goalFats = goalCalories * selectedMacro.fats;
+
+    const goalMacros = macronutrients[fitnessGoal];
+
+    const goalCarbs = goalCalories * goalMacros.carbs;
+    const goalProtein = goalCalories * goalMacros.protein;
+    const goalFats = goalCalories * goalMacros.fats;
 
     // Display results
     const resultsDiv = document.getElementById("results");

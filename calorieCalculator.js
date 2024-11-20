@@ -68,7 +68,7 @@ function calculateCalories() {
     const resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = `
         <h3>Results</h3>
-        <p><strong>Maintenance Calories:</strong> ${maintenanceCalories.toFixed(0)} kcal/day</p>
+        <p><strong>Estimated Maintenance Calories:</strong> ${maintenanceCalories.toFixed(0)} kcal/day</p>
         <p><strong>Macronutrient Breakdown:</strong></p>
         <ul>
             <li>Carbs: ${caloriesFromCarbs.toFixed(0)} kcal (${(caloriesFromCarbs / 4).toFixed(0)}g)</li>

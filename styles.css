@@ -132,7 +132,7 @@ body {
 
 /* calorie form styling */
 .small-input {
-  max-width: 100px; /* Adjust this as needed */
+  max-width: 80px; /* Adjust this as needed */
 }
 
 .small-select {

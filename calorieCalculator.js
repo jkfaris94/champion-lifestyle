@@ -6,8 +6,8 @@ function calculateCalories() {
     const activityLevel = document.getElementById('activity-level').value;
     const sex = document.getElementById('sex').value; 
     const age = parseFloat(document.getElementById('age').value);
-    const goalWeight = parseFloat(document.getElementById('goal-weight').value);
-    const fitnessGoal = document.getElementById('fitness-goal').value;
+    // const goalWeight = parseFloat(document.getElementById('goal-weight').value);
+    // const fitnessGoal = document.getElementById('fitness-goal').value;
 
     // Validate inputs
     if (isNaN(weight) || isNaN(feet) || isNaN(inches) || !sex || isNaN(age)) {
@@ -48,13 +48,13 @@ function calculateCalories() {
     const maintenanceCalories = BMR * activityMultiplier;
 
     // calculate goal maintenance calories 
-    const goalWeightInKG = convertWeightToKG(goalWeight);
-    const goalBMR = calculateBMR(goalWeightInKG, heightInCM, age, sex);
-    const goalCalories = goalBMR * activityMultiplier;
+    //const goalWeightInKG = convertWeightToKG(goalWeight);
+    //const goalBMR = calculateBMR(goalWeightInKG, heightInCM, age, sex);
+    //const goalCalories = goalBMR * activityMultiplier;
 
     // determine surplus or deficit needed
-    const calorieDifference = goalCalories - maintenanceCalories;
-    const adjustmentType = calorieDifference > 0 ? "surplus" : "deficit";
+    //const calorieDifference = goalCalories - maintenanceCalories;
+    //const adjustmentType = calorieDifference > 0 ? "surplus" : "deficit";
 
     // Macronutrient distribution
     const macronutrients = {
@@ -74,11 +74,11 @@ function calculateCalories() {
     const caloriesFromFats = maintenanceCalories * selectedMacro.fats;
 
 
-    const goalMacros = macronutrients[fitnessGoal];
+    //const goalMacros = macronutrients[fitnessGoal];
 
-    const goalCarbs = goalCalories * goalMacros.carbs;
-    const goalProtein = goalCalories * goalMacros.protein;
-    const goalFats = goalCalories * goalMacros.fats;
+    //const goalCarbs = goalCalories * goalMacros.carbs;
+    //const goalProtein = goalCalories * goalMacros.protein;
+    //const goalFats = goalCalories * goalMacros.fats;
 
     // Display results
     const resultsDiv = document.getElementById("results");
@@ -91,7 +91,9 @@ function calculateCalories() {
             <li>Protein: ${caloriesFromProtein.toFixed(0)} kcal (${(caloriesFromProtein / 4).toFixed(0)}g)</li>
             <li>Fats: ${caloriesFromFats.toFixed(0)} kcal (${(caloriesFromFats / 9).toFixed(0)}g)</li>
         </ul>
-        <h3>Goal Calories</h3>
+    `;
+}
+     /*   <h3>Goal Calories</h3>
         <p><strong>Estimated Goal Calories:</strong> ${goalCalories.toFixed(0)} kcal/day</p>
         <p><strong>Calorie Adjustment:</strong> ${Math.abs(calorieDifference.toFixed(0))} kcal (${adjustmentType})</p>
         <p><strong>Macronutrient Breakdown:</strong></p>
@@ -101,4 +103,4 @@ function calculateCalories() {
             <li>Fats: ${goalFats.toFixed(0)} kcal (${(goalFats / 9).toFixed(0)}g)</li>
         </ul>
     `;
-}
+} */

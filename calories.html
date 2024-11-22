@@ -56,8 +56,8 @@
               </nav>
         </header>
 
-        <div class="container d-flex justify-content-center" >
-                <div class="col-md-6">
+        <div class="container d-flex justify-content-center">
+                <div class="col-8">
                     <section>
                     <h2 class="text-center my-4">Total Daily Energy Expenditure (TDEE)</h2>
 
@@ -97,7 +97,7 @@
                                 <select id="body-type" class="form-select" required>
                                     <option value="">Select...</option>
                                     <option value="ectomorph">Ectomorph (thin and fine-boned)</option>
-                                    <option value="mesomorph">Mesomorph (Broad and muscular)</option>
+                                    <option value="mesomorph">Mesomorph (muscular)</option>
                                     <option value="endomorph">Endomorph (rounded and soft)</option>
                                 </select>
                             </div>
@@ -140,6 +140,48 @@
             </div>
         </div>
         
+        <div class="container d-flex justify-content-center">
+            <div class="col-8">
+                <section>
+                    <h2>Deficit/Surplus Calculator</h2>
+                    <form id="deficitSurplus">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="tdee" class="form-label">TDEE</label>
+                                <input type="number" id="tdee" class="form-control small-input" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="gain-lose" class="form-label">Lose or Gain Weight?</label>
+                                <select id="gain-lose" class="form-select small-input" required>
+                                    <option value="">...</option>
+                                    <option value="gain">Gain</option>
+                                    <option value="lose">Lose</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lbs-week" class="form-label">How Many lbs per week?</label>
+                                <select id="lbs-week" class="form-select small-input" required>
+                                    <option value="">...</option>
+                                    <option value="0.5">0.5</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="col-12 text-center mt-3">
+                                <button type="button" id="calculate-btn" class="btn btn-primary" onclick="surplusDeficit()">Calculate</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="result2" class="mt-4 text-center">
+                        <!-- Results here -->
+                    </div>
+                </section>
+            </div>
+        </div>
+
+            </div>
+        </div>
 
         <footer class="text-center py-3">
             <p>&copy; 2024 Champion Lifestyle LLC</p>

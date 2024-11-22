@@ -147,6 +147,15 @@ body {
   max-width: 100px;
 }
 
+/* collapsalbe text*/
+.hidden {
+  display: none;
+}
+.read-more {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 /* Footer styling */
 footer {
   background-color: #000000;

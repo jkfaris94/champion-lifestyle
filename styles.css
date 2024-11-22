@@ -143,6 +143,10 @@ body {
   width: 100%; /* Adjust this as needed */
 }
 
+.medium-input {
+  max-width: 100px;
+}
+
 /* Footer styling */
 footer {
   background-color: #000000;

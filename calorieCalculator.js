@@ -93,6 +93,40 @@ function calculateCalories() {
         </ul>
     `;
 }
+function surplusDeficit() {
+    const tdee = parseFloat(document.getElementById('tdee').value);
+    const gainLose = document.getElementById("gain-lose").value;
+    const lbsPerWeek = parseFloat(document.getElementById("lbs-week").value);
+
+    // Validate inputs
+    if (isNaN(tdee) || !gainLose || isNaN(lbsPerWeek)) {
+        alert("Please fill in all fields correctly!");
+        return;
+    }
+
+    // Calculate daily calorie adjustment
+    const calorieAdjustment = (lbsPerWeek * 3500) / 7; // 1 lb ≈ 3500 calories
+    let goalCalories;
+
+    if (gainLose === "gain") {
+        goalCalories = tdee + calorieAdjustment;
+    } else if (gainLose === "lose") {
+        goalCalories = tdee - calorieAdjustment;
+    } else {
+        alert("Invalid selection for gain/lose. Please try again.");
+        return;
+    }
+
+    // Display the result
+    const resultDiv = document.getElementById("result2");
+    resultDiv.innerHTML = `
+        <h4>Results:</h4>
+        <p>Calorie Adjustment: <strong>${gainLose === "gain" ? "+" : "-"}${calorieAdjustment.toFixed(2)} kcal/day</strong></p>
+        <p>Goal Calories: <strong>${goalCalories.toFixed(2)} kcal/day</strong></p>
+    `;
+}
+
+
      /*   <h3>Goal Calories</h3>
         <p><strong>Estimated Goal Calories:</strong> ${goalCalories.toFixed(0)} kcal/day</p>
         <p><strong>Calorie Adjustment:</strong> ${Math.abs(calorieDifference.toFixed(0))} kcal (${adjustmentType})</p>

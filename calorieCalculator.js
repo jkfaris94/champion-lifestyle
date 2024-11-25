@@ -15,8 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const activityLevel = document.getElementById('activity-level').value;
         const sex = document.getElementById('sex').value; 
         const age = parseFloat(document.getElementById('age').value);
-        // const goalWeight = parseFloat(document.getElementById('goal-weight').value);
-        // const fitnessGoal = document.getElementById('fitness-goal').value;
     
         // Validate inputs
         if (isNaN(weight) || isNaN(feet) || isNaN(inches) || !sex || isNaN(age)) {
@@ -56,15 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
         const maintenanceCalories = BMR * activityMultiplier;
     
-        // calculate goal maintenance calories 
-        //const goalWeightInKG = convertWeightToKG(goalWeight);
-        //const goalBMR = calculateBMR(goalWeightInKG, heightInCM, age, sex);
-        //const goalCalories = goalBMR * activityMultiplier;
-    
-        // determine surplus or deficit needed
-        //const calorieDifference = goalCalories - maintenanceCalories;
-        //const adjustmentType = calorieDifference > 0 ? "surplus" : "deficit";
-    
         // Macronutrient distribution
         const macronutrients = {
             ectomorph: { carbs: 0.55, protein: 0.25, fats: 0.2 },
@@ -82,12 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const caloriesFromProtein = maintenanceCalories * selectedMacro.protein;
         const caloriesFromFats = maintenanceCalories * selectedMacro.fats;
     
-    
-        //const goalMacros = macronutrients[fitnessGoal];
-    
-        //const goalCarbs = goalCalories * goalMacros.carbs;
-        //const goalProtein = goalCalories * goalMacros.protein;
-        //const goalFats = goalCalories * goalMacros.fats;
     
         // Display results
         const resultsDiv = document.getElementById("results");

@@ -84,6 +84,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <li>Fats: ${caloriesFromFats.toFixed(0)} kcal (${(caloriesFromFats / 9).toFixed(0)}g)</li>
             </ul>
         `;
+         // automaticall fills in TDEE to surplusdeficit calculator
+        const tdeeInput = document.getElementById("tdee");
+        if (tdeeInput) {
+            tdeeInput.value = maintenanceCalories.toFixed(0); // Auto-fill the value
+        }
     }
     function surplusDeficit() {
         const tdee = parseFloat(document.getElementById('tdee').value);
@@ -116,11 +121,5 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>Calorie Adjustment: <strong>${gainLose === "gain" ? "+" : "-"}${calorieAdjustment.toFixed(2)} kcal/day</strong></p>
             <p>Goal Calories: <strong>${goalCalories.toFixed(2)} kcal/day</strong></p>
         `;
-    
-        //add calculated TDEE results to second calculator
-        const tdeeInput = document.getElementById("tdee");
-        if (tdeeInput) {
-            tdeeInput.value = maintenanceCalories.toFixed(0);
-        }
     }
 });

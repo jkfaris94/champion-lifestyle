@@ -140,17 +140,4 @@ document.addEventListener("DOMContentLoaded", () => {
             tdeeInput.value = maintenanceCalories.toFixed(0);
         }
     }
-    
-    
-         /*   <h3>Goal Calories</h3>
-            <p><strong>Estimated Goal Calories:</strong> ${goalCalories.toFixed(0)} kcal/day</p>
-            <p><strong>Calorie Adjustment:</strong> ${Math.abs(calorieDifference.toFixed(0))} kcal (${adjustmentType})</p>
-            <p><strong>Macronutrient Breakdown:</strong></p>
-            <ul>
-                <li>Carbs: ${goalCarbs.toFixed(0)} kcal (${(goalCarbs / 4).toFixed(0)}g)</li>
-                <li>Protein: ${goalProtein.toFixed(0)} kcal (${(goalProtein / 4).toFixed(0)}g)</li>
-                <li>Fats: ${goalFats.toFixed(0)} kcal (${(goalFats / 9).toFixed(0)}g)</li>
-            </ul>
-        `;
-    } */
 });

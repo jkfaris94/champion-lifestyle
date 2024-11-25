@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const calculateCaloriesBtn = document.getElementById("calculate-calories-btn");
+    const surplusDeficitBtn = document.getElementById("calculate-btn");
+
+    calculateCaloriesBtn.addEventListener("click", calculateCalories);
+    surplusDeficitBtn.addEventListener("click", surplusDeficit);
+
+    
     // Your JavaScript code here
     function calculateCalories() {
         const weight = parseFloat(document.getElementById('weight').value);

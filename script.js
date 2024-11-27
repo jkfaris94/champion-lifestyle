@@ -6,13 +6,27 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function sendMail() {
-  let params = {
-      name : document.getElementById("name").value,
-      email : document.getElementById("email").value,
-      message : document.getElementById("message").value,
+  const params = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+  };
+
+  // Validate inputs before sending
+  if (!params.name || !params.email || !params.message) {
+      alert("Please fill out all fields before sending.");
+      return;
   }
 
-  emailjs.send("service_t458qp2", "template_hjmej7w",params).then(alert("Your Message has sent!"))
+  emailjs
+      .send("service_t458qp2", "template_hjmej7w", params)
+      .then(() => {
+          alert("Your message has been sent!");
+      })
+      .catch((error) => {
+          console.error("Failed to send email:", error);
+          alert("Something went wrong. Please try again.");
+      });
 }
 
 function toggleReadMore() {
